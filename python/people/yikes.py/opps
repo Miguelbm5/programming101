@@ -1,0 +1,24 @@
+import unittest
+
+def solution(param1, param2):
+    return param1 + param2
+
+def backwards(s):
+    r = ""
+    for l in s:
+        r=  l+r
+    return r
+ 
+   
+
+class Testmethods(unittest.TestCase):
+
+    def test(self):
+        self. assertEqual(solution(1,2), 3)
+
+    def testBackwards(self):
+        self.assertEqual(backwards("ab"),"ba")
+        self.assertEqual(backwards("hola"),"aloh")
+        
+
+unittest.main()
